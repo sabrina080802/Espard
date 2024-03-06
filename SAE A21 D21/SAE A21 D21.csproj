@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA661285-70CF-4804-A1EA-326CA4D38852}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SAE_A21_D21</RootNamespace>
+    <AssemblyName>SAE A21 D21</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Connexion-_1_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>DLLpdf\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>DLLpdf\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AdministrationAjouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministrationAjouter.Designer.cs">
+      <DependentUpon>AdministrationAjouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdministrationExercices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministrationExercices.Designer.cs">
+      <DependentUpon>AdministrationExercices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdministrationProgression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministrationProgression.Designer.cs">
+      <DependentUpon>AdministrationProgression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AjoutParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AjoutParticipant.Designer.cs">
+      <DependentUpon>AjoutParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfirmerQuitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmerQuitter.Designer.cs">
+      <DependentUpon>ConfirmerQuitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration.Designer.cs">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Eleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Eleve.Designer.cs">
+      <DependentUpon>Eleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exercices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exercices.Designer.cs">
+      <DependentUpon>Exercices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeconSuivante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeconSuivante.Designer.cs">
+      <DependentUpon>LeconSuivante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Recapitulatif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recapitulatif.Designer.cs">
+      <DependentUpon>Recapitulatif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ControlPagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlPagination.Designer.cs">
+      <DependentUpon>ControlPagination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ButtonCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ButtonCustom.Designer.cs">
+      <DependentUpon>ButtonCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ComboBoxCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ComboBoxCustom.Designer.cs">
+      <DependentUpon>ComboBoxCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomForm.Designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Exercice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Exercice.Designer.cs">
+      <DependentUpon>Exercice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExerciceDesc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExerciceDesc.Designer.cs">
+      <DependentUpon>ExerciceDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExerciceDesordre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExerciceDesordre.Designer.cs">
+      <DependentUpon>ExerciceDesordre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExerciceGrammaire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExerciceGrammaire.Designer.cs">
+      <DependentUpon>ExerciceGrammaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExerciceTrous.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExerciceTrous.Designer.cs">
+      <DependentUpon>ExerciceTrous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExerciceVoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExerciceVoc.Designer.cs">
+      <DependentUpon>ExerciceVoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PointedProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PointedProgressBar.Designer.cs">
+      <DependentUpon>PointedProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CircleProgessBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CircleProgessBar.Designer.cs">
+      <DependentUpon>CircleProgessBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProgressionEleve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProgressionEleve.Designer.cs">
+      <DependentUpon>ProgressionEleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uservoca.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uservoca.Designer.cs">
+      <DependentUpon>uservoca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Voc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Voc.Designer.cs">
+      <DependentUpon>Voc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AbstractControlDescriptionProvider.cs" />
+    <EmbeddedResource Include="Forms\AdministrationAjouter.resx">
+      <DependentUpon>AdministrationAjouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdministrationExercices.resx">
+      <DependentUpon>AdministrationExercices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdministrationProgression.resx">
+      <DependentUpon>AdministrationProgression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AjoutParticipant.resx">
+      <DependentUpon>AjoutParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmerQuitter.resx">
+      <DependentUpon>ConfirmerQuitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administration.resx">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Eleve.resx">
+      <DependentUpon>Eleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exercices.resx">
+      <DependentUpon>Exercices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeconSuivante.resx">
+      <DependentUpon>LeconSuivante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Recapitulatif.resx">
+      <DependentUpon>Recapitulatif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ButtonCustom.resx">
+      <DependentUpon>ButtonCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ComboBoxCustom.resx">
+      <DependentUpon>ComboBoxCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Exercice.resx">
+      <DependentUpon>Exercice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExerciceDesc.resx">
+      <DependentUpon>ExerciceDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExerciceDesordre.resx">
+      <DependentUpon>ExerciceDesordre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExerciceGrammaire.resx">
+      <DependentUpon>ExerciceGrammaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExerciceTrous.resx">
+      <DependentUpon>ExerciceTrous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ExerciceVoc.resx">
+      <DependentUpon>ExerciceVoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PointedProgressBar.resx">
+      <DependentUpon>PointedProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CircleProgessBar.resx">
+      <DependentUpon>CircleProgessBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProgressionEleve.resx">
+      <DependentUpon>ProgressionEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uservoca.resx">
+      <DependentUpon>uservoca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Voc.resx">
+      <DependentUpon>Voc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-outline 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connexion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-outline_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Connexion-_1_.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
